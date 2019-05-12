@@ -11,7 +11,7 @@ try to consolidate `/24` subnets into globs, where possible.  For now, feast on
 your new >6000 line `known_hosts` file!
 
 ### DEPENDENCIES
-I have not added a `requirements` file of a `setup.py` file yet, but there is
+I have not added a `requirements` file or a `setup.py` file yet, but there is
 only a single dependency as of now: [ipcalc](https://github.com/tehmaze/ipcalc).
 
 You can grab it with this one-liner (you may need to use `sudo` here):
