@@ -1,0 +1,7 @@
+*.swn
+*.swo
+*.swp
+
+rev_ssh.pkg/artifacts/*
+bak/*
+*.tar.gz
