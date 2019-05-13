@@ -23,3 +23,13 @@ you@yourbox $ pip3 install ipcalc
 ```
 you@yourbox $ ./ssh_helper.py
 ```
+
+`ssh_helper` takes no arguments; it simply queries GitHub's API for a current
+list of Git servers and barfs out entries in the SSH `known_hosts` file format.
+
+You can add the new entries to your SSH `known_hosts` file by redirecting
+`ssh_helper`'s output like so:
+
+```
+you@yourbox $ ./ssh_helper.py >> ~/.ssh/known_hosts
+```
