@@ -1,7 +1,21 @@
 # GitHub Helpers
-Some handy little friends that make using GitHub a little easier.
+Some handy little helper scripts that make automating and using GitHub easier.
 
 ## Known Hosts Helper
+
+### INTRODUCTION
+Over the course of automating more of the things I do with GitHub+SSH, I quickly
+realized that a single entry in your `known_hosts` file isn't going to cut the
+mustard.  As it turns out, GitHub has been ramping up their load balancers for
+SSH, too.  What this means is that Git and SSH are going to complain a *lot*.
+SSH-based automation will break whenever the load balancer hands you an IP
+address that your computer has not seen before (a very likely event, given that
+there are a staggering 6000+ Git IPs).
+
+To get around this, I have designed a tool that automatically generates entries
+you can use in your `~/.ssh/known_hosts` file.
+
+### DESCRIPTION
 `ssh_helper.py` is a simple Python script that prints valid `known_hosts`
 entries to STDOUT based on the IP ranges listed in the `git` block at the
 GitHub API's `/meta` endpoint.
