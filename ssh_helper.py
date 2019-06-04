@@ -17,7 +17,7 @@ gitnets = req.json()['git']
 
 for net in gitnets:
   for ip in ipcalc.Network(net):
-    gitservers = ['github.com']
+    gitservers = ['*.github.com']
     gitservers.append(ip.to_compressed())
     s_gitservers = ','.join(gitservers)
     print(s_gitservers + ' ' + gh_pubkey)
